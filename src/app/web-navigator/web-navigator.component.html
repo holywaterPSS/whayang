@@ -1,0 +1,31 @@
+<div class="navi-logo" (click)="goToHome()">
+    <img src="assets/logo.png" class="logo-img">
+    <p class="large-font">능운대</p>
+</div>
+
+<div class="navi-menu">
+    <div class="menu">
+        <p class="title">예약</p>
+    </div>
+    <div class="menu">
+        <p class="title">후기</p>
+    </div>
+    <div class="menu" (mouseover)="mouseOver()" (mouseout)="mouseOut()">
+        <p class="title">객실</p>
+        <div *ngIf="showDetail" class="detail-info">
+            <p class="detail">능운대</p>
+            <p class="detail">학소대</p>
+            <p class="detail">와룡암</p>
+            <p class="detail">첨성대</p>
+        </div>
+    </div>
+    <div class="menu">
+        <p class="title">평상</p>
+    </div>
+    <div class="menu">
+        <p class="title">식사</p>
+    </div>
+    <div class="menu">
+        <p class="title">정보</p>
+    </div>
+</div>

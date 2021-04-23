@@ -1,0 +1,71 @@
+
+:host {
+    padding: 35rem 60rem 10rem 60rem;
+
+    display:flex;
+    justify-content: space-between;
+
+    --height: 95rem;
+}
+
+.large-font{
+    font-size: 25rem;
+    line-height: 30rem;
+    color: white;
+}
+
+.small-font{
+    font-size: 20rem;
+    line-height: 25rem;
+    color: white;
+}
+
+/////////////////////////////////////////////
+.navi-logo{
+    height: var(--height);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img{ height: 65rem; }
+    cursor:pointer;
+}
+
+.navi-menu{
+    height: var(--height);
+
+    display:flex;
+    justify-content: space-between;
+
+    .menu{
+        margin: 0 20rem;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .title{
+            @extend .large-font;
+            padding: 5rem 10rem;
+            border-bottom: 3rem solid rgb(0,0,0,0);
+            cursor:pointer;
+        }
+        .title:hover{
+            border-color: white;
+        }
+
+        .detail-info{
+            position: absolute;
+            top: 100rem;
+
+            .detail{
+                @extend .small-font;
+                margin: 10rem 0;
+                cursor:pointer;
+                border-bottom: 2rem solid rgb(0,0,0,0);
+            }
+            .detail:hover{
+                border-color: white;
+            }
+        }
+    }
+}
