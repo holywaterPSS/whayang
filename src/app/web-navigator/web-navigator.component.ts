@@ -17,16 +17,19 @@ export class WebNavigatorComponent {
 	}
 
 
-	showDetail: boolean = false;
+	showReservation: boolean = false;
+	showRoom: boolean = false;
 	
-	mouseOver() {
-		this.showDetail = true;
+	mouseOver(value: string) {
+		this.showReservation = (value ==="showReservation");
+		this.showRoom = (value === "showRoom");
 		this._isMouseOver = true;
 	}
-	mouseOut() {
+	mouseOut(value: string) {
 		this._isMouseOver = false;
 		setTimeout(() => {
-			this.showDetail = this._isMouseOver;
+			if(value === "showReservation"){ this.showReservation = this._isMouseOver; }
+			if(value === "showRoom"){ this.showRoom = this._isMouseOver; }
 		}, 100);
 	}
 	private _isMouseOver: boolean = true;
